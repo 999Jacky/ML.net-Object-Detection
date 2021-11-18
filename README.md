@@ -17,13 +17,12 @@
 python3 -m tf2onnx.convert --graphdef ./frozen_inference_graph.pb --output ./model.onnx --fold_const --opset 14 --inputs image_tensor:0 --outputs num_detections:0,detection_boxes:0,detection_scores:0,detection_classes:0
 ```
 
-*
-input和ouput可以透過[summarize_graph](https://github.com/onnx/tensorflow-onnx/blob/master/README.md#tool-to-get-graph-inputs--outputs)
+* input和ouput可以透過[summarize_graph](https://github.com/onnx/tensorflow-onnx/blob/master/README.md#tool-to-get-graph-inputs--outputs)
 工具查看
 * opset 指定為14 (實測12以上就可轉換成功),如果轉換失敗(如下圖)將opset指定最新版本試試
-  ![img1](./img/img1.png)
+  ![img1](./mlOD/img/img1.png)
   轉換成功，大小多了70多MB
-  ![img2](./img/img2.png)
+  ![img2](./mlOD/img/img2.png)
 
 ### 環境
 
@@ -43,11 +42,11 @@ input和ouput可以透過[summarize_graph](https://github.com/onnx/tensorflow-on
 
 #### Cpu辨識(AMD 5900x):
 
-![cpu](./img/cpu.png)
+![cpu](./mlOD/img/cpu.png)
 
-![1](./img/result1.jpg)
-![2](./img/result2.jpg)
-![3](./img/result3.jpg)
+![1](./mlOD/img/result1.jpg)
+![2](./mlOD/img/result2.jpg)
+![3](./mlOD/img/result3.jpg)
 
 ##### Gpu辨識(RTX2060 6G):
 
@@ -55,8 +54,8 @@ input和ouput可以透過[summarize_graph](https://github.com/onnx/tensorflow-on
 
 在ApplyOnnxModel時要指定使用的gpu ID
 
-*測試時OnnxRuntime 1.9.0 無法正常讀取此模組需要降版到 1.8.1*
+*測試時OnnxRuntime 1.9.0 無法正常讀取此模組，降版到 1.8.1後正常*
 
-![gpu](./img/gpu.png)
+![gpu](./mlOD/img/gpu.png)
 
 辨識結果與cpu一樣
