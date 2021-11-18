@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="img\**"/>
+    <Compile Remove="model\**"/>
+    <Compile Remove="output\**"/>
+    <EmbeddedResource Remove="img\**"/>
+    <EmbeddedResource Remove="model\**"/>
+    <EmbeddedResource Remove="output\**"/>
+    <None Remove="img\**"/>
+    <None Remove="model\**"/>
+    <None Remove="output\**"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="1.6.0"/>
+    <PackageReference Include="Microsoft.ML.OnnxRuntime.Gpu" Version="1.8.1"/>
+    <PackageReference Include="Microsoft.ML.OnnxTransformer" Version="1.6.0"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="assets\img\img1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\img\img14.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\img\img2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\img\img3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\img\img4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\img\img5.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\model\model.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\model\model2.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="assets\img\"/>
+    <Folder Include="assets\output\"/>
+  </ItemGroup>
+
+</Project>

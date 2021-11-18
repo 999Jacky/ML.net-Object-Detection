@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mlOD", "mlOD\mlOD.csproj", "{6A9C42BB-4F9A-43CE-BACF-2108B1A34050}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A9C42BB-4F9A-43CE-BACF-2108B1A34050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9C42BB-4F9A-43CE-BACF-2108B1A34050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9C42BB-4F9A-43CE-BACF-2108B1A34050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9C42BB-4F9A-43CE-BACF-2108B1A34050}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7083DC4-7F2E-45F5-8694-A1F6AA87460A}
+	EndGlobalSection
+EndGlobal
